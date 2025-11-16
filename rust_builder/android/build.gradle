@@ -53,7 +53,10 @@ android {
     }
 }
 
-apply from: "../cargokit/gradle/plugin.gradle"
+// apply from: "../cargokit/gradle/plugin.gradle"
+plugins {
+    id '../cargokit/gradle/plugin.gradle'
+}
 cargokit {
     manifestDir = "../../rust"
     libname = "rust_lib_YWallet"
