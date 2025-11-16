@@ -110,7 +110,7 @@ class VoteOverviewState extends State<VoteOverview> {
                             "Press to start downloading data from the zcash blockchain",
                         child: FilledButton(
                             onPressed: onDownload, child: Text("Download")))
-                    : ButtonBar(children: [
+                    : OverflowBar(children: [
                         FilledButton(onPressed: onVote, child: Text("Vote")),
                         OutlinedButton(
                             onPressed: onDelegate, child: Text("Delegate")),

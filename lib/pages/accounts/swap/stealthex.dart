@@ -120,7 +120,7 @@ class StealthExState extends State<StealthExPage> with WithLoadingAnimation {
                         controller: addressController,
                       ),
                     Gap(32),
-                    ButtonBar(children: [
+                    OverflowBar(children: [
                       ElevatedButton(
                         onPressed: () {
                           final from = fromKey.currentState!;

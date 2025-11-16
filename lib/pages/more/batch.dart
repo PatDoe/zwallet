@@ -51,7 +51,7 @@ class _BatchBackupState extends State<BatchBackupPage> {
                         controller: backupKeyController,
                       ),
                       Gap(8),
-                      ButtonBar(
+                      OverflowBar(
                         children: [
                           ElevatedButton.icon(
                             onPressed: save,
@@ -78,7 +78,7 @@ class _BatchBackupState extends State<BatchBackupPage> {
                         controller: restoreKeyController,
                       ),
                       Gap(8),
-                      ButtonBar(
+                      OverflowBar(
                         children: [
                           ElevatedButton.icon(
                             onPressed: restore,

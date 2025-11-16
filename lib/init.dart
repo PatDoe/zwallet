@@ -94,9 +94,8 @@ class _AppState extends State<App> {
       final baseTheme = appSettings.palette.dark ? FlexThemeData.dark(scheme: scheme)
       : FlexThemeData.light(scheme: scheme);
       final theme = baseTheme.copyWith(
-        useMaterial3: true,
         dataTableTheme: DataTableThemeData(
-          headingRowColor: MaterialStateColor.resolveWith(
+          headingRowColor: WidgetStateColor.resolveWith(
             (_) => baseTheme.highlightColor,
           ),
         ),

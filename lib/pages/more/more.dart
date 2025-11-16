@@ -10,7 +10,6 @@ import 'package:settings_ui/settings_ui.dart';
 import '../../accounts.dart';
 import '../../coin/coins.dart';
 import '../../generated/intl/messages.dart';
-import '../../store2.dart';
 import '../utils.dart';
 import '../widgets.dart';
 

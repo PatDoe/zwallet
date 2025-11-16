@@ -138,7 +138,7 @@ String? addressValidator(String? v) {
 String? paymentURIValidator(String? v) {
   final s = S.of(rootNavigatorKey.currentContext!);
   if (v == null || v.isEmpty) return s.required;
-  if (WarpApi.decodePaymentURI(aa.coin, v!) == null) return s.invalidPaymentURI;
+  if (WarpApi.decodePaymentURI(aa.coin, v) == null) return s.invalidPaymentURI;
   return null;
 }
 

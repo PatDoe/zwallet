@@ -89,7 +89,7 @@ class _DisclaimerState extends State<DisclaimerPage> {
                 onChanged: (v) => setState(() => accepted[2] = v!),
               ),
               Gap(16),
-              ButtonBar(children: [
+              OverflowBar(children: [
                 IconButton.outlined(
                     onPressed: allAccepted ? _accept : null,
                     icon: Icon(Icons.check))
