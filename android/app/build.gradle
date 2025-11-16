@@ -29,9 +29,15 @@ if (flutterVersionName == null) {
 
 def key = System.getenv("JKS_PASSWORD") ?: file("/run/secrets/pwd").text.trim()
 
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+// apply plugin: 'com.android.application'
+// apply plugin: 'kotlin-android'
+// apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'org.jetbrains.kotlin.android' version '1.9.22'
+    id 'dev.flutter.flutter-plugin-loader' version '1.0.0'
+}
 
 android {
     compileSdkVersion 34

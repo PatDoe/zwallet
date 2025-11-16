@@ -6,7 +6,10 @@ import org.apache.tools.ant.taskdefs.condition.Os
 
 CargoKitPlugin.file = buildscript.sourceFile
 
-apply plugin: CargoKitPlugin
+// apply plugin: CargoKitPlugin
+plugins {
+    id CargoKitPlugin
+}
 
 class CargoKitExtension {
     String manifestDir; // Relative path to folder containing Cargo.toml

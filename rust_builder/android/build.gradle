@@ -22,7 +22,11 @@ rootProject.allprojects {
     }
 }
 
-apply plugin: 'com.android.library'
+// apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
 
 android {
     if (project.android.hasProperty("namespace")) {
