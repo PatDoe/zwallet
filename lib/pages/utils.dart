@@ -150,7 +150,16 @@ ColorPalette getPalette(Color color, int n) => ColorPalette.polyad(
       brightnessVariability: 10,
     );
 
-int numPoolsOf(int v) => Uint8(v).bitsSet;
+int numPoolsOf(int v) {
+  // Count set bits (Hamming weight) in the low 8 bits of v.
+  var x = v & 0xFF;
+  var count = 0;
+  while (x != 0) {
+    x &= x - 1;
+    count++;
+  }
+  return count;
+}
 
 int poolOf(int v) {
   switch (v) {
@@ -226,7 +235,7 @@ Future<bool> authenticate(BuildContext context, String reason) async {
       didAuthenticate = await KeyGuardmanager.authStatus == "true";
     } else {
       didAuthenticate = await localAuth.authenticate(
-          localizedReason: reason, options: AuthenticationOptions());
+          localizedReason: reason);
     }
     if (didAuthenticate) {
       return true;
