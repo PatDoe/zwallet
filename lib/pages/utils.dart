@@ -5,7 +5,6 @@ import 'dart:math';
 
 import 'package:YWallet/main.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
-import 'package:binary/binary.dart';
 import 'package:collection/collection.dart';
 import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:decimal/decimal.dart';
